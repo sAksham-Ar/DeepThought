@@ -195,4 +195,23 @@
   })();
 </script>
 {% endif %}
+<!-- then add this badge component -->
+<script src="{{ get_url(path='scripts/highlightjs-badge.js') }}"></script>
+
+<script>
+    // apply HighlightJS
+    var pres = document.querySelectorAll("pre>code");
+    
+    // add HighlightJS-badge (options are optional)
+    var options = {   // optional
+       contentSelector: "#ArticleBody",
+       
+       // CSS class(es) used to render the copy icon.
+       copyIconClass: "fas fa-copy",
+       // CSS class(es) used to render the done icon.
+       checkIconClass: "fas fa-check text-success"
+    };
+    window.highlightJsBadge(options);
+</script>
+
 {% endblock %}
